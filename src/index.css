@@ -1,0 +1,41 @@
+:root {
+  --font-primary: 'Sora', sans-serif;
+
+  --background: #f3f1eb;          
+  --card-bg: #eae6dd;             
+  --accent: #c8d1a0;              
+  --accent-hover: #b6bf93;        
+  --text-primary: #1f1e1c;        
+  --text-secondary: #4f4c44;      
+  --button-text: #191815; 
+
+  --avatar-glow: rgba(140, 166, 91, 0.3);
+}
+
+[data-theme='dark'] {
+  --background: #1f1e1c;        
+  --card-bg: #2f2d2a;           
+  --accent: #8ca65b;
+  --accent-hover: #7d954e;    
+  --text-primary: #f3eada;      
+  --text-secondary: #bcb4a3;    
+  --button-text: #191815;
+
+  --avatar-glow: rgba(200, 209, 160, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

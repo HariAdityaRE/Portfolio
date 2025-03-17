@@ -1,0 +1,61 @@
+.buddiesSection {
+    padding: 4rem 1rem;
+    background-color: var(--background);
+    text-align: center;
+  }
+  
+  .carouselWrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carouselTrack {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 260px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--accent);
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(200, 209, 160, 0.4);
+  }
+  
+  .links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .links a {
+    color: var(--accent);
+    transition: color 0.3s;
+  }
+  
+  .links a:hover {
+    color: var(--accent-hover);
+  }
+  

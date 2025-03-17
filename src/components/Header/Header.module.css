@@ -1,0 +1,55 @@
+.header {
+  width: 100%;
+  padding: 1.5rem 0rem;
+  background-color: var(--background);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--text-primary);
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.themeToggle:hover {
+  background-color: var(--hover-bg);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* You can later add a mobile menu */
+  }
+}
