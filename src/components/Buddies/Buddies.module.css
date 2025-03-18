@@ -109,10 +109,16 @@
   .links a:hover {
     color: var(--accent-hover);
   }
+
+  @media (max-width: 350px) {
+    .buddiesSection {
+      padding: 4rem 0rem;
+    }
+  }
   
   @media (max-width: 500px) {
     .carouselWrapper {
-      padding: 0 0.5rem;
+      gap: 0rem;
     }
   
     .carousel {
