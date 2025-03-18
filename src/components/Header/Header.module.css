@@ -19,6 +19,7 @@
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
+  padding-left: 1rem;
   color: var(--text-primary);
 }
 
@@ -53,6 +54,7 @@
 .iconContainer {
   display: flex;
   align-items: baseline;
+  padding-right: 1rem;
 }
 
 .themeToggle {
