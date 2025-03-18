@@ -1,4 +1,5 @@
 import React from 'react';
+import strings from '../../strings/strings.json'
 import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
@@ -6,16 +7,16 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <p className={styles.text}>
-          © {new Date().getFullYear()} Hari Aditya. All rights reserved.
+          © {new Date().getFullYear()} {strings.Footer.Text}
         </p>
         <div className={styles.links}>
-          <a href="https://github.com/HariAdityaRE" target="_blank" rel="noopener noreferrer">
-            GitHub
+          <a href={strings.SocialMedia.GitHub.LinkText} target="_blank" rel="noopener noreferrer">
+            {strings.SocialMedia.GitHub.Text}
           </a>
-          <a href="https://linkedin.com/in/hariaditya24" target="_blank" rel="noopener noreferrer">
-            LinkedIn
+          <a href={strings.SocialMedia.LinkedIn.LinkText} target="_blank" rel="noopener noreferrer">
+          {strings.SocialMedia.LinkedIn.Text}
           </a>
-          <a href="mailto:hariadityabhamidipati@gmail.com">Email</a>
+          <a href={`mailto:${strings.SocialMedia.Email.LinkText}`}>{strings.SocialMedia.Email.Text}</a>
         </div>
       </div>
     </footer>

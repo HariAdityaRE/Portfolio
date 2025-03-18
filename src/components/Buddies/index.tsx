@@ -1,69 +1,78 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import strings from '../../strings/strings.json'
 import styles from './Buddies.module.css';
-import { motion } from 'framer-motion';
-import { FaLinkedin, FaGlobe } from 'react-icons/fa';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 
-const buddies = [
+type Buddy = {
+  name: string;
+  description: string;
+  image: string;
+  role: string;
+  linkedIn?: string;
+};
+
+const buddies: Buddy[] = [
   {
     name: 'Varsha Foujdhar',
-    description: 'Automation Tester at Capgemini for GE Client',
-    image: '/assets/varsha.jpg',
-    linkedin: 'https://linkedin.com/in/varshafoujdhar',
-    portfolio: '',
+    role: 'Automation Tester at Capgemini',
+    description: 'My all time supporter that holds my hand when I am in need.',
+    image: '/images/VarshaProfile.jpg',
+    linkedIn: 'https://www.linkedin.com/in/varshaf',
   },
   {
     name: 'Suresh K',
-    description: 'Sr. Java Microservices Developer',
-    image: '/assets/suresh.jpg',
-    linkedin: 'https://linkedin.com/in/suresh',
-    portfolio: '',
+    role: 'Sr. Java Developer at ThermoFisher Scientific',
+    description: 'A true big brother that I can rely on.',
+    image: '/images/sureshProfile.jpg',
   },
   {
     name: 'Bhargav Pathina',
-    description: 'Azure devops engineer at TCS',
-    image: '/assets/bhargav.jpg',
-    linkedin: 'https://linkedin.com/in/bhargav',
-    portfolio: '',
+    role: 'Azure devops engineer at TCS',
+    description: 'The Tough looking gentle and humorous guy in the group',
+    image: '/images/avatar.jpg',
   },
 ];
 
-const allBuddies = [...buddies, ...buddies];
-
 const Buddies: React.FC = () => {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const cardWidth = 240;
+
+  const scroll = (direction: 'left' | 'right') => {
+    const container = carouselRef.current;
+    if (!container) return;
+
+    const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  };
+
   return (
     <section id="buddies" className={styles.buddiesSection}>
-      <h2>My Buddies</h2>
+      <h2 className={styles.title}>{strings.Buddies.Title}</h2>
       <div className={styles.carouselWrapper}>
-        <motion.div
-          className={styles.carouselTrack}
-          animate={{ x: ['0%', '-50%'] }}
-          transition={{
-            repeat: Infinity,
-            ease: 'linear',
-            duration: 30,
-          }}
-          whileHover={{ animationPlayState: 'paused' }}
-        >
-          {allBuddies.map((buddy, index) => (
+        <button className={styles.arrow} onClick={() => scroll('left')}>
+          <ChevronLeft size={24} />
+        </button>
+        <div className={styles.carousel} ref={carouselRef}>
+          {buddies.map((buddy, index) => (
             <div key={index} className={styles.card}>
               <img src={buddy.image} alt={buddy.name} className={styles.avatar} />
-              <h3>{buddy.name}</h3>
-              <p>{buddy.description}</p>
+              <h3 className={styles.name}>{buddy.name}</h3>
+              <p className={styles.role}>{buddy.role}</p>
+              <p className={styles.description}>{buddy.description}</p>
               <div className={styles.links}>
-                {buddy.linkedin && (
-                  <a href={buddy.linkedin} target="_blank" rel="noreferrer">
+                {buddy.linkedIn && (
+                  <a href={buddy.linkedIn} target="_blank" rel="noreferrer">
                     <FaLinkedin />
-                  </a>
-                )}
-                {buddy.portfolio && (
-                  <a href={buddy.portfolio} target="_blank" rel="noreferrer">
-                    <FaGlobe />
                   </a>
                 )}
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
+        <button className={styles.arrow} onClick={() => scroll('right')}>
+          <ChevronRight size={24} />
+        </button>
       </div>
     </section>
   );

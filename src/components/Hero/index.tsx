@@ -1,4 +1,5 @@
 import React from 'react';
+import strings from '../../strings/strings.json'
 import styles from './Hero.module.css';
 import { motion } from 'framer-motion';
 
@@ -12,14 +13,23 @@ const Hero: React.FC = () => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         <h1 className={styles.heading}>
-          Turning ideas<br />into interactive experiences
+          {strings.Hero.Title}
         </h1>
         <p className={styles.subtext}>
-          I’m a front-end developer crafting modern, fast, and visually striking web experiences that leave a lasting impact.
+          {strings.Hero.SubTitle}
         </p>
-        <a href="#contact" className={styles.cta}>
-          Let’s Connect
-        </a>
+        <div className={styles.actions}>
+          <a href="#contact" className={styles.cta}>
+            {strings.Hero.ActionButtons.PrimaryBtn}
+          </a>
+          <a
+            href="/assets/HariAditya_Resume.pdf"
+            download
+            className={styles.resumeButton}
+          >
+            {strings.Hero.ActionButtons.SecondaryBtn}
+          </a>
+        </div>
       </motion.div>
     </section>
   );

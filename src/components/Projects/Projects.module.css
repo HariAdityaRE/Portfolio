@@ -61,6 +61,7 @@
   }
   
   .links a {
+    position: relative;
     margin-right: 1rem;
     color: var(--accent);
     font-weight: 500;
@@ -70,6 +71,21 @@
   
   .links a:hover {
     color: var(--accent-hover);
+  }
+
+  .links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
+  
+  .links a:hover::after {
+    width: 100%;
   }
   
   [data-theme='dark'] {

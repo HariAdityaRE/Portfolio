@@ -1,11 +1,11 @@
-// src/components/Contact/Contact.tsx
 import React, { useState } from 'react';
+import strings from '../../strings/strings.json'
 import styles from './Contact.module.css';
 import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const email = 'hariadityabhamidipati@gmail.com';
+  const email = strings.SocialMedia.Email.LinkText;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
@@ -22,8 +22,8 @@ const Contact: React.FC = () => {
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out. I'm open to freelance work, Full Time Roles, collaboration, or just a chat about frontend tech!</p>
+        <h2>{strings.Contact.Title}</h2>
+        <p>{strings.Contact.SubTitle}</p>
 
         <div className={styles.emailContainer}>
           <span className={styles.email}>{email}</span>
@@ -32,9 +32,9 @@ const Contact: React.FC = () => {
           </button>
         </div>
 
-        <a className={styles.emailLink} href={`mailto:${email}`}>
-          Or click to send an email →
-        </a>
+        <div className={styles.emailLink}>
+          <a href={`mailto:${email}`}>{strings.Contact.SendMailLinkText}</a>
+        </div>
       </motion.div>
     </section>
   );

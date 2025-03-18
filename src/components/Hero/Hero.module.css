@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8rem 1.5rem;
+    padding: 1.5rem;
     color: var(--text-primary);
     background-color: var(--background);
     text-align: center;
-  }
+  } 
   
   .content {
     max-width: 900px;
@@ -20,6 +20,7 @@
     letter-spacing: -0.5px;
     color: var(--text-primary);
     margin-bottom: 2rem;
+    white-space: pre;
   }
   
   .subtext {
@@ -30,12 +31,20 @@
     max-width: 680px;
     margin: 0 auto 3rem auto;
   }
+
+  .actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
   
   .cta {
     display: inline-block;
     padding: 0.9rem 2rem;
     background-color: var(--accent);
-    color: var(--text-primary);
+    color: var(--button-text);
     font-size: 1rem;
     font-weight: 500;
     border-radius: 8px;
@@ -46,6 +55,24 @@
   .cta:hover {
     background-color: var(--accent-hover);
   }
+
+  .resumeButton {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: var(--accent);
+    font-weight: 600;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .resumeButton:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--accent-hover);
+  }
+  
   
   @media (max-width: 768px) {
     .heading {

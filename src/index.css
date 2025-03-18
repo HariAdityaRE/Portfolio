@@ -3,11 +3,12 @@
 
   --background: #f3f1eb;          
   --card-bg: #eae6dd;             
-  --accent: #c8d1a0;              
-  --accent-hover: #b6bf93;        
+  --accent:  #8ca656;              
+  --accent-hover: #7b944d;        
   --text-primary: #1f1e1c;        
   --text-secondary: #4f4c44;      
-  --button-text: #191815; 
+  --button-text: #1f1e1c; 
+  --hover-bg: #dbe8c4;
 
   --avatar-glow: rgba(140, 166, 91, 0.3);
 }
@@ -19,7 +20,8 @@
   --accent-hover: #7d954e;    
   --text-primary: #f3eada;      
   --text-secondary: #bcb4a3;    
-  --button-text: #191815;
+  --button-text: #f3eada;
+  --hover-bg: #2a2e1f;
 
   --avatar-glow: rgba(200, 209, 160, 0.25);
 }

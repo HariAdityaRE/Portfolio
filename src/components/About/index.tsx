@@ -1,4 +1,5 @@
 import React from 'react';
+import strings from '../../strings/strings.json'
 import styles from './About.module.css';
 import { motion } from 'framer-motion';
 
@@ -15,14 +16,9 @@ const About: React.FC = () => {
         <div className={styles.avatarWrapper}>
           <img src="/images/profile.jpg" alt="Hari Aditya" className={styles.avatar} />
         </div>
-        <h2 className={styles.title}>About Me</h2>
-        <p className={styles.description}>
-          I'm a passionate Front-End Developer with 2 years of experience, skilled in building
-          responsive web interfaces using React, TypeScript, and modern tooling. I enjoy bringing designs to life, writing clean code, and learning new technologies.
-        </p>
-        <p className={styles.description}>
-          Currently, I’m working at TCS, building scalable solutions for a Microsoft client. I’m now looking to transition into a product company where I can grow technically and work on exciting user-facing products.
-        </p>
+        <h2 className={styles.title}>{strings.About.Title}</h2>
+        <p className={styles.description}>{strings.About.Description.Para1}</p>
+        <p className={styles.description}>{strings.About.Description.Para2}</p>
       </motion.div>
     </section>
   );

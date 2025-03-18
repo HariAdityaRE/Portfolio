@@ -1,9 +1,8 @@
 {
-  "name": "my-app",
+  "name": "hari-aditya-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fluentui/react": "^8.0.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",

@@ -3,7 +3,6 @@
   background-color: var(--background);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   text-align: center;
-  width: 100%;
 }
 
 .container {
@@ -27,6 +26,7 @@
 }
 
 .links a {
+  position: relative;
   font-size: 0.9rem;
   text-decoration: none;
   color: var(--accent);
@@ -35,4 +35,19 @@
 
 .links a:hover {
   color: var(--accent-hover);
+}
+
+.links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+  width: 100%;
 }

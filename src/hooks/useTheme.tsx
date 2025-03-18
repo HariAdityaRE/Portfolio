@@ -1,4 +1,3 @@
-// src/hooks/useTheme.tsx
 import { useContext } from 'react';
 import { ThemeContext } from '../theme/ThemeContext';
 
