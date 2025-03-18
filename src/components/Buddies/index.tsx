@@ -24,7 +24,7 @@ const buddies: Buddy[] = [
     name: 'Suresh K',
     role: 'Sr. Java Developer at ThermoFisher Scientific',
     description: 'A true big brother that I can rely on.',
-    image: '/images/sureshProfile.jpg',
+    image: '/images/SureshProfile.jpg',
   },
   {
     name: 'Bhargav Pathina',
