@@ -16,20 +16,20 @@ const buddies: Buddy[] = [
   {
     name: 'Varsha Foujdhar',
     role: 'Automation Tester at Capgemini',
-    description: 'My all time supporter that holds my hand when I am in need.',
+    description: 'My constant pillar of support — always by my side through every high and low.',
     image: '/images/VarshaProfile.jpg',
     linkedIn: 'https://www.linkedin.com/in/varshaf',
   },
   {
     name: 'Suresh K',
     role: 'Sr. Java Developer at ThermoFisher Scientific',
-    description: 'A true big brother that I can rely on.',
+    description: 'Like a true big brother — steady, strong, and someone I can always count on.',
     image: '/images/SureshProfile.jpg',
   },
   {
     name: 'Bhargav Pathina',
     role: 'Azure devops engineer at TCS',
-    description: 'The Tough looking gentle and humorous guy in the group',
+    description: 'Looks tough on the outside, but the most gentle and hilarious soul in our crew.',
     image: '/images/avatar.jpg',
   },
 ];
