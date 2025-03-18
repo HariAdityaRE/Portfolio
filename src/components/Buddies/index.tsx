@@ -25,12 +25,14 @@ const buddies: Buddy[] = [
     role: 'Sr. Java Developer at ThermoFisher Scientific',
     description: 'Like a true big brother — steady, strong, and someone I can always count on.',
     image: '/images/SureshProfile.jpg',
+    linkedIn: 'https://www.linkedin.com/in/suresh-sandy-00933a99',
   },
   {
     name: 'Bhargav Pathina',
     role: 'Azure devops engineer at TCS',
     description: 'Looks tough on the outside, but the most gentle and hilarious soul in our crew.',
-    image: '/images/avatar.jpg',
+    image: '/images/BhargavProfile.jpg',
+    linkedIn: 'https://www.linkedin.com/in/bhargav-pathina-669bab255',
   },
 ];
 
