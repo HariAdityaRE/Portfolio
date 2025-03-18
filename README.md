@@ -15,7 +15,9 @@ This is my personal portfolio website built with React, TypeScript, CSS Modules,
 ## 📸 Preview
 
 ### Dark Theme
-![image](https://github.com/user-attachments/assets/dcc17a06-5ce6-4c4e-9cf1-4acbae6c07cb)
+![image](https://github.com/user-attachments/assets/8f5c3e53-661f-4cdb-9663-70726e0bc384)
+
 
 ### Light Theme
-![image](https://github.com/user-attachments/assets/afc2245d-3280-4cb3-85d6-f5e669457ec8)
+![image](https://github.com/user-attachments/assets/e6dccc92-8bbe-411a-a579-3863d75cc925)
+
