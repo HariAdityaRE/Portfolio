@@ -16,7 +16,7 @@ const projects: Project[] = [
     description: 'The site you’re looking at right now – built with React, TypeScript, and Framer Motion.',
     stack: ['React', 'TypeScript', 'Framer Motion'],
     liveUrl: '#',
-    githubUrl: 'https://github.com/HariAdityaRE/My-Projects',
+    githubUrl: 'https://github.com/HariAdityaRE/Portfolio',
   },
   {
     title: 'Notebook Web App',
